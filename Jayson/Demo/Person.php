@@ -18,34 +18,25 @@ class Person
     public $age = null;
 
     /**
-     * @param $name
+     * @var null
      */
-    public function setName($name)
+    public $business = null;
+
+    /**
+     * @param $property
+     * @param $value
+     */
+    public function __set($property, $value)
     {
-        $this->name = $name;
+        $this->$property = $value;
     }
 
     /**
-     * @return null
+     * @param $property
+     * @return mixed
      */
-    public function getName()
+    public function __get($property)
     {
-        return $this->name;
-    }
-
-    /**
-     * @param $age
-     */
-    public function setAge($age)
-    {
-        $this->age = $age;
-    }
-
-    /**
-     * @return null
-     */
-    public function getAge()
-    {
-        return $this->age;
+        return $this->$property;
     }
 }

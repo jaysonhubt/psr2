@@ -8,9 +8,13 @@ $person = new Jayson\Demo\Person;
 
 $name = 'Jayson';
 $age = 23;
-$person->setName($name);
-$person->setAge($age);
+$business = 'Scuti';
+$person->name = $name;
+$person->age = $age;
+$person->business = $business;
 
-echo 'Name: ' . $person->getName();
+echo 'Name: ' . $person->name;
 echo '<br/>';
-echo 'Age: ' . $person->getAge();
+echo 'Age: ' . $person->age;
+echo '<br/>';
+echo 'Business: ' . $person->business;
